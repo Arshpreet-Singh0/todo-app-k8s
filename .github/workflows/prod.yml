@@ -32,8 +32,8 @@ jobs:
           PAT: ${{ secrets.PAT }}
         run: |
           git clone https://github.com/Arshpreet-Singh0/argo-deployment.git
-          cd argo-deploymen
-          sed -i 's|image: 100xdevs/photo-ai-frontend:.*|image: 100xdevs/photo-ai-frontend:${{ github.sha }}|' prod/photo-ai/deployment.yml
+          cd argo-deployment
+          sed -i 's|image: arsh000/todo-app:.*|image: arsh000/todo-app:${{ github.sha }}|' manifest.yml
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add .
